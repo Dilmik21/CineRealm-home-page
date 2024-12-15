@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Space */
+header {
+    height: 80px; /* Assuming the header has a height of 80px */
+    background-color: #09555c; /* Deep Blue */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures header stays on top */
+}
+
+/* Main Container */
+.container {
+    margin-top: 100px; /* Adds space between the header and the form (adjusted to header height) */
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex-grow: 1;
+    margin-bottom: 120px; /* Leaves space for the footer (adjusted for footer height) */
+}
+
+/* Title */
+h1 {
+    font-size: 28px;
+    color: #12063b; /* Deep Purple */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+form select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form select:focus {
+    border-color: #fbb03b;
+    box-shadow: 0 0 8px rgba(251, 176, 59, 0.5); /* Subtle focus glow */
+}
+
+/* Button (Submit) */
+form button {
+    padding: 12px 20px;
+    background-color: #fbb03b;
+    border: none;
+    color: #12063b;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: flex-start; /* Align to the left */
+}
+
+form button:hover {
+    background-color: #d99a30;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Screenings List */
+h2 {
+    font-size: 22px;
+    color: #12063b;
+    margin-top: 30px;
+    text-align: center;
+}
+
+ul#screeningsList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul#screeningsList li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#screeningsList li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Footer Space */
+footer {
+    height: 100px; /* Assuming the footer has a height of 100px */
+    background-color: #1C1C1C;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust form inputs and button on smaller screens */
+    form label {
+        font-size: 14px;
+    }
+
+    form select, form button {
+        font-size: 14px;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    /* Make the screenings list items full width on small screens */
+    ul#screeningsList li {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
